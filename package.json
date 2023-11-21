@@ -1,0 +1,14 @@
+{
+  "name": "elevate",
+  "version": "1.0.0",
+  "description": "Develop your business with us",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "elevate"
+  ],
+  "author": "Ahmed Aishan",
+  "license": "ISC"
+}
