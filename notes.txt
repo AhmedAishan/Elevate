@@ -1,8 +1,0 @@
-primary color - #F36A3E
-secondary color - #FFB30B
-
-text black - #000000
-text grey - #555555
-text color special - #fdba5d
-
-grey color - #4a4b4a

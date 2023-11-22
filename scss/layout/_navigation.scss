@@ -1,0 +1,31 @@
+.nav {
+  background-color: rgb(216, 216, 216);
+  padding: 0 2rem 0 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+  }
+
+  &__item {
+    padding-right: 4rem;
+  }
+
+  &__link,
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: var(--grey);
+    font-size: 2rem;
+  }
+}
+
+img {
+  width: 15rem;
+}
