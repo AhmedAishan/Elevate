@@ -1,6 +1,6 @@
 .nav {
-  background-color: rgb(216, 216, 216);
-  padding: 0 2rem 0 2rem;
+  padding: 0 3rem 0 3rem;
+  background-color: var(--white);
 
   display: flex;
   justify-content: space-between;
@@ -14,7 +14,9 @@
   }
 
   &__item {
-    padding-right: 4rem;
+    &:not(:last-child) {
+      padding-right: 4rem;
+    }
   }
 
   &__link,

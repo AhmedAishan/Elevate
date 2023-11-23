@@ -1,4 +1,5 @@
 .btn {
+  cursor: pointer;
   border: none;
   background-color: var(--text-format);
   color: var(--white);
@@ -7,4 +8,9 @@
   width: 10.5rem;
   height: 4.4rem;
   text-transform: uppercase;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: var(--secondary-color);
+  }
 }
