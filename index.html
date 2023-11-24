@@ -23,7 +23,7 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <header>
+    <header class="u-margin-bottom">
       <nav class="nav">
         <div class="logo">
           <img src="img/logo-2.png" alt="Elevate-logo" />
@@ -31,9 +31,15 @@
 
         <ul class="nav__list">
           <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Features</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+          <li class="nav__item">
+            <a href="#services" class="nav__link">Services</a>
+          </li>
+          <li class="nav__item">
+            <a href="#features" class="nav__link">Features</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
           <li class="nav__item"><button class="btn">sign up</button></li>
         </ul>
       </nav>
@@ -43,7 +49,7 @@
           <h1 class="header__primary">
             Better solutions to
             <span class="header__primary--break">
-              <span class="header__primary--format">elevate</span> your business
+              <span class="text-format">elevate</span> your business
             </span>
           </h1>
           <h3 class="header__secondary">
@@ -60,6 +66,71 @@
         </div>
       </div>
     </header>
-    <main></main>
+    <main>
+      <section id="services" class="section section-services u-margin-bottom">
+        <h2 class="u-padding-left">
+          Where should I <span class="text-format">start</span>?
+        </h2>
+
+        <div class="services-container">
+          <div class="services-box">
+            <svg class="services-box__icons">
+              <use xlink:href="img/sprite.svg#icon-laptop"></use>
+            </svg>
+            <h3 class="text-format services-box__text">Create</h3>
+          </div>
+          <div class="services-content">
+            <h3 class="services-content__heading">Create a website</h3>
+            <p class="services-content__para">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
+              harum distinctio, voluptatibus, dolor voluptates officiis autem
+              dolorum odit quia totam corporis, laudantium vel sapiente beatae
+              veniam. Quibusdam fugiat eius omnis.
+            </p>
+          </div>
+        </div>
+        <div class="services-container">
+          <div class="services-content">
+            <h3 class="services-content__heading text-format">
+              Website optimization
+            </h3>
+            <p class="services-content__para">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
+              harum distinctio, voluptatibus, dolor voluptates officiis autem
+              dolorum odit quia totam corporis, laudantium vel sapiente beatae
+              veniam. Quibusdam fugiat eius omnis.
+            </p>
+          </div>
+          <div class="services-box services-box--format">
+            <svg class="services-box__icons">
+              <use xlink:href="img/sprite.svg#icon-rocket"></use>
+            </svg>
+            <h3 class="services-box__text services-box__text--format">
+              Optimise
+            </h3>
+          </div>
+        </div>
+        <div class="services-container">
+          <div class="services-box">
+            <svg class="services-box__icons">
+              <use xlink:href="img/sprite.svg#icon-megaphone"></use>
+            </svg>
+            <h3 class="text-format services-box__text">Advertise</h3>
+          </div>
+          <div class="services-content">
+            <h3 class="services-content__heading">Promote your website</h3>
+            <p class="services-content__para">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
+              harum distinctio, voluptatibus, dolor voluptates officiis autem
+              dolorum odit quia totam corporis, laudantium vel sapiente beatae
+              veniam. Quibusdam fugiat eius omnis.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section section-features"></section>
+      <section id="contact" class="section section-contact"></section>
+    </main>
   </body>
 </html>
