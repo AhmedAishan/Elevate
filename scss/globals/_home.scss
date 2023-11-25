@@ -131,10 +131,34 @@
     font-weight: 500;
     width: 40vw;
   }
-  &__dashboard {
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+
+  background-color: rgb(51, 51, 51);
+  border-radius: 3px;
+  width: 70%;
+  height: 30rem;
+  margin: 6rem auto 0;
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.25);
+  color: var(--white);
+
+  &__box {
+    &:not(:last-child) {
+      // border-right: 1px solid red;
+    }
   }
+
   &__progress-number {
+    font-weight: 300;
+    margin-bottom: 1rem;
   }
+
   &__progress-text {
+    font-size: 1.8rem;
   }
 }
