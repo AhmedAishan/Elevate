@@ -48,10 +48,12 @@
   text-align: center;
 
   &__icons {
+    height: 12rem;
   }
 
   &__text {
     text-transform: uppercase;
+    font-size: 3.5rem;
 
     &--format {
       color: var(--white);
@@ -59,7 +61,7 @@
   }
 
   &--format {
-    border: 1px solid rgba(247, 247, 247, 0.863);
+    border: 1px solid var(--background);
     background-image: linear-gradient(
       to bottom,
       var(--primary-color),
@@ -72,10 +74,31 @@
   width: 40vw;
 
   &__heading {
+    font-size: 3.5rem;
+    padding-bottom: 0.7rem;
   }
   &__para {
     color: var(--grey);
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 500;
+    padding-bottom: 1.3rem;
+  }
+
+  &__icons {
+    height: 1.8rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  &__learn-more {
+    border-bottom: 2.8px solid var(--background);
+    font-size: 1.8rem;
+    transition: border-bottom 0.3s;
+    font-weight: 600;
+    padding: 3px;
+
+    &:hover {
+      border-bottom: 2.8px solid var(--text-format);
+    }
   }
 }
