@@ -13,4 +13,9 @@
   &:hover {
     background-color: var(--primary-color);
   }
+
+  &--contact {
+    width: 11rem;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+  }
 }

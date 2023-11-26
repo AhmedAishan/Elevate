@@ -14,10 +14,6 @@
       display: block;
     }
   }
-  &__secondary {
-    color: var(--grey);
-  }
-
   &__wave {
     &__img {
       width: 100%;
@@ -147,12 +143,6 @@
   box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.25);
   color: var(--white);
 
-  &__box {
-    &:not(:last-child) {
-      // border-right: 1px solid red;
-    }
-  }
-
   &__progress-number {
     font-weight: 300;
     margin-bottom: 1rem;
@@ -160,5 +150,17 @@
 
   &__progress-text {
     font-size: 1.8rem;
+  }
+}
+
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+
+  &__background {
+    width: 100%;
+    margin-top: -35rem;
+    z-index: 0;
   }
 }

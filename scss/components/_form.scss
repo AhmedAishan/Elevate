@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 2rem;
+  z-index: 1;
+  position: relative;
+
+  &__label {
+    display: block;
+    margin: 1rem 0;
+    font-weight: 500;
+  }
+  &__input[type='text'] {
+    display: block;
+    border: none;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-family: inherit;
+    width: 25vw;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
