@@ -177,6 +177,25 @@
 
 .footer {
   background-color: var(--grey-2);
-  height: 38rem;
-  margin-top: -20vh;
+  height: 30rem;
+  margin-top: -15vh;
+  color: var(--white);
+  display: flex;
+
+  &__brand {
+  }
+  &__connect {
+  }
+  &__icons {
+    fill: black;
+    width: 1.2rem;
+
+    &:not(:last-child) {
+      padding-right: 0.2rem;
+    }
+  }
+  &__company {
+  }
+  &__pages {
+  }
 }

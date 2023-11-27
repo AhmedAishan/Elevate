@@ -30,4 +30,8 @@ h3 {
 
 .heading-secondary {
   color: var(--grey);
+
+  &--footer {
+    font-size: 1.6rem;
+  }
 }
