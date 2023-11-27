@@ -138,8 +138,8 @@
   background-color: rgb(51, 51, 51);
   border-radius: 3px;
   width: 70%;
-  height: 30rem;
-  margin: 6rem auto 0;
+  height: 18rem;
+  margin: 8rem auto 0;
   box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.25);
   color: var(--white);
 
@@ -151,6 +151,12 @@
   &__progress-text {
     font-size: 1.8rem;
   }
+
+  &__divider {
+    width: 2px;
+    background-color: var(--white);
+    height: 50%;
+  }
 }
 
 .contact {
@@ -158,9 +164,19 @@
   justify-content: space-evenly;
   margin-top: 2rem;
 
+  &__contact-text {
+    z-index: 1;
+  }
+
   &__background {
     width: 100%;
     margin-top: -35rem;
     z-index: 0;
   }
+}
+
+.footer {
+  background-color: var(--grey-2);
+  height: 38rem;
+  margin-top: -20vh;
 }
