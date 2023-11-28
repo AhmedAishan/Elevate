@@ -181,10 +181,9 @@
   margin-top: -15vh;
   color: var(--white);
   font-size: 1.4rem;
-  padding: 2rem;
 
   display: grid;
-  grid-template-columns: 25vw 1fr 1fr;
+  grid-template-columns: repeat(2, 25vw) 1fr 1fr;
   align-content: center;
   justify-content: center;
   justify-items: center;
@@ -197,16 +196,22 @@
   &__icons {
     fill: black;
     width: 1.2rem;
+    height: 2rem;
+    width: 1.5rem;
 
     &:not(:last-child) {
       padding-right: 0.2rem;
     }
   }
   &__company {
+    grid-column: 3/4;
+
+    &__icon-box {
+    }
     &__icons-container {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
+      align-items: center;
     }
 
     &__icons {
@@ -215,5 +220,12 @@
     }
   }
   &__pages {
+    grid-column: 4/5;
+    a,
+    a:active,
+    a:visited {
+      display: block;
+      color: inherit;
+    }
   }
 }
