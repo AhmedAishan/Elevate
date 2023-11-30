@@ -5,17 +5,25 @@
   color: var(--white);
   border-radius: 2.5rem;
   font-size: 2rem;
-  width: 10.5rem;
-  height: 4.4rem;
   text-transform: uppercase;
   transition: all 0.2s;
+  display: inline-block;
+  padding: 1rem;
 
   &:hover {
     background-color: var(--primary-color);
   }
 
   &--contact {
-    width: 11rem;
-    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+    align-self: flex-start;
+    box-shadow: 0rem 0.4rem 9rem rgba(0, 0, 0, 0.199);
+    padding: 1rem 1.5rem;
+  }
+
+  &--form {
+    padding: 1.2rem 4rem;
+    grid-column: 1/-1;
+    justify-self: center;
+    margin-top: 1rem;
   }
 }
