@@ -40,7 +40,9 @@
           <li class="nav__item">
             <a href="#contact" class="nav__link">Contact</a>
           </li>
-          <li class="nav__item"><button class="btn">sign up</button></li>
+          <li class="nav__item">
+            <button class="btn btn-signup">sign up</button>
+          </li>
         </ul>
       </nav>
 
@@ -218,25 +220,24 @@
                 required
               />
             </label>
-            <label for="name" class="form__label"
+            <label for="contact-email" class="form__label"
               >Email
               <input
-                type="text"
-                id="name"
+                type="email"
+                id="contact-email"
                 class="form__input"
                 placeholder="Enter your email"
                 required
               />
             </label>
             <!-- Add textarea -->
-            <label for="name" class="form__label"
+            <label for="message" class="form__label"
               >Message
-              <input
-                type="text"
-                id="name"
-                class="form__input"
+              <textarea
+                class="form__message"
                 placeholder="Enter your message"
-              />
+                id="message"
+              ></textarea>
             </label>
             <button class="btn btn--contact">submit</button>
           </form>
@@ -304,12 +305,12 @@
         Create an account in just <span class="text-format">5 minutes!</span>
       </h3>
       <form action="#" class="registration__form">
-        <label for="name">Name</label>
-        <input type="text" id="name" />
-        <label for="email">Email</label>
-        <input type="email" id="email" />
+        <label for="register-name ">Name</label>
+        <input type="text" id="register-name" required />
+        <label for="register-email">Email</label>
+        <input type="email" id="register-email" required />
         <label for="password">Password</label>
-        <input type="password" id="password" />
+        <input type="password" id="password" required />
         <button class="btn btn--form">Create</button>
       </form>
     </div>

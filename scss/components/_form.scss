@@ -11,7 +11,8 @@
     margin: 1rem 0;
     font-weight: 500;
   }
-  &__input[type='text'] {
+  &__input,
+  &__message {
     display: block;
     border: none;
     background-color: var(--white);
@@ -22,9 +23,12 @@
     font-size: 2rem;
     font-family: inherit;
     width: 25vw;
+    outline: none;
+  }
 
-    &:focus {
-      outline: none;
-    }
+  &__message {
+    width: 25vw !important;
+    height: 100%;
+    resize: none;
   }
 }

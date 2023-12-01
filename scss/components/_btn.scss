@@ -9,6 +9,7 @@
   transition: all 0.2s;
   display: inline-block;
   padding: 1rem;
+  outline: none;
 
   &:hover {
     background-color: var(--primary-color);
