@@ -1,0 +1,65 @@
+.registration {
+  background-color: var(--background);
+  min-width: 30%;
+  height: 50rem;
+  border-radius: 3px;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  padding: 5rem 3rem 3rem;
+
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+
+  &__btn {
+    cursor: pointer;
+    border: none;
+    font-size: 3.8rem;
+    background: none;
+
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  }
+
+  &__text {
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    row-gap: 3rem;
+    align-content: center;
+    margin: 0 3.5rem;
+
+    font-size: 2.2rem;
+
+    input {
+      outline: none;
+      border: none;
+      background-color: var(--white);
+      font-size: 2.2rem;
+      padding: 0.6rem;
+    }
+  }
+}
+
+.success-message {
+  position: fixed;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -82%);
+  z-index: 1000;
+  background-color: var(--background);
+  border-radius: 30rem;
+  padding: 1rem 0;
+  font-size: 1.8rem;
+  text-align: center;
+  min-width: 30%;
+
+  transition: all 0.5s;
+}

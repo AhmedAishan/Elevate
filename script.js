@@ -1,12 +1,13 @@
 'use strict';
 
-console.log('Project Elevate started');
-
 // 0- DATA
 const openSignUp = document.querySelector('.btn-signup');
 const registration = document.querySelector('.registration');
 const closeSignUp = document.querySelector('.registration__btn');
 const overlay = document.querySelector('.overlay');
+const successMessage = document.querySelector('.success-message');
+const createBtn = document.querySelector('.btn--form');
+let singUpInput = document.forms['registerForm']['fname'].value;
 
 const hidden = document.querySelector('.hidden');
 
@@ -24,6 +25,19 @@ const closeRegistrationForm = function (e) {
   overlay.classList.add('hidden');
 };
 
+const inputValidation = function (e) {
+  e.preventDefault();
+  // if ((singUpInput = '')) {
+  //   console.log('sdaas');
+  //   return;
+  // }
+  successMessage.classList.remove('hidden');
+  setTimeout(() => {
+    successMessage.classList.add('hidden');
+    location.reload();
+  }, 2500);
+};
+
 openSignUp.addEventListener('click', openRegistrationForm);
 closeSignUp.addEventListener('click', closeRegistrationForm);
 overlay.addEventListener('click', closeRegistrationForm);
@@ -31,6 +45,16 @@ document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !registration.classList.contains('hidden'))
     closeRegistrationForm();
 });
+createBtn.addEventListener(
+  'click',
+  inputValidation
+  // check if inputs are filled
+  // set timeout
+  // if yes clear inputs
+  // display success message
+  // close all and refresh browser
+  // If no, do not display message
+);
 
 // account created message to the user
 

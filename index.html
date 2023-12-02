@@ -297,20 +297,35 @@
         <a href="#features">go to features page</a>
         <a href="#contact">contact us</a>
       </div>
+      <div class="footer__copyright">
+        <p>&copy; by Aishan Salam. Project for learning purpose</p>
+      </div>
     </footer>
 
+    <div class="success-message hidden">
+      <p>
+        <span class="text-green">&check;</span> Your account has been
+        successfully created
+      </p>
+    </div>
     <div class="registration hidden">
       <button class="registration__btn">x</button>
       <h3 class="registration__text">
         Create an account in just <span class="text-format">5 minutes!</span>
       </h3>
-      <form action="#" class="registration__form">
+      <form name="registerForm" class="registration__form">
         <label for="register-name ">Name</label>
-        <input type="text" id="register-name" required />
+        <input
+          class="input"
+          name="fname"
+          type="text"
+          id="register-name"
+          required
+        />
         <label for="register-email">Email</label>
-        <input type="email" id="register-email" required />
+        <input class="input" type="email" id="register-email" required />
         <label for="password">Password</label>
-        <input type="password" id="password" required />
+        <input class="input" type="password" id="password" required />
         <button class="btn btn--form">Create</button>
       </form>
     </div>
