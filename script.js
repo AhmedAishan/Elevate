@@ -8,6 +8,7 @@ const overlay = document.querySelector('.overlay');
 const successMessage = document.querySelector('.success-message');
 const createBtn = document.querySelector('.btn--form');
 let singUpInput = document.forms['registerForm']['fname'].value;
+const navList = document.querySelector('.nav__list');
 
 const hidden = document.querySelector('.hidden');
 
@@ -25,6 +26,7 @@ const closeRegistrationForm = function (e) {
   overlay.classList.add('hidden');
 };
 
+// account created message to the user
 const inputValidation = function (e) {
   e.preventDefault();
   // if ((singUpInput = '')) {
@@ -56,9 +58,16 @@ createBtn.addEventListener(
   // If no, do not display message
 );
 
-// account created message to the user
-
 // 2- smooth scrolling
+navList.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  // Matching stratergy - making sure that the event only triggers when the e.target has the class 'nav__link'
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href'); // Selecting only the part where we actually mention where to scroll ex: #home
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' }); //Now we are passing the above value into this (passing the value of where to scroll)
+  }
+});
 // 3- sticky nav
 // 4- reveal sections
 // 5- lazy loading
