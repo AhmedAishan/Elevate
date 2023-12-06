@@ -9,6 +9,7 @@ const successMessage = document.querySelector('.success-message');
 const createBtn = document.querySelector('.btn--form');
 let singUpInput = document.forms['registerForm']['fname'].value;
 const navList = document.querySelector('.nav__list');
+const footerPages = document.querySelector('.footer__pages');
 
 const hidden = document.querySelector('.hidden');
 
@@ -59,6 +60,7 @@ createBtn.addEventListener(
 );
 
 // 2- smooth scrolling
+// a- for nav
 navList.addEventListener('click', function (e) {
   e.preventDefault();
 
@@ -68,6 +70,15 @@ navList.addEventListener('click', function (e) {
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' }); //Now we are passing the above value into this (passing the value of where to scroll)
   }
 });
+
+// b- smooth scrolling for footer Pages
+footerPages.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const id = e.target.getAttribute('href');
+  document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+});
+
 // 3- sticky nav
 // 4- reveal sections
 // 5- lazy loading
