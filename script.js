@@ -79,7 +79,6 @@ footerPages.addEventListener('click', function (e) {
   document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
 });
 
-// 3- sticky nav
 // 4- reveal sections
 // 5- lazy loading
 // 7- skeleton
