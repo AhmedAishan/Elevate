@@ -1,5 +1,8 @@
-// Header
+.section {
+  transition: transform 1s, opacity 1s;
+}
 
+// Header
 .header {
   &__text-box {
     padding: 6rem 3rem 0;
@@ -239,10 +242,13 @@
     gap: 0.5rem;
 
     a,
-    a:active,
     a:visited {
       display: block;
       color: inherit;
+    }
+
+    a:active {
+      color: var(--text-format);
     }
   }
 
@@ -267,4 +273,9 @@
 .hidden {
   opacity: 0;
   visibility: hidden;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
