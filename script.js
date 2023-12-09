@@ -6,8 +6,14 @@ const registration = document.querySelector('.registration');
 const closeSignUp = document.querySelector('.registration__btn');
 const overlay = document.querySelector('.overlay');
 const successMessage = document.querySelector('.success-message');
+
+// form input elements
 const createBtn = document.querySelector('.btn--form');
 let singUpInput = document.forms['registerForm']['fname'].value;
+const inputUser = document.querySelector('.reg-input-user');
+const inputEmail = document.querySelector('.reg-input-email');
+const inputPassword = document.querySelector('.reg-input-password');
+
 const navList = document.querySelector('.nav__list');
 const footerPages = document.querySelector('.footer__pages');
 const allSections = document.querySelectorAll('.section');
@@ -31,10 +37,12 @@ const closeRegistrationForm = function (e) {
 // account created message to the user
 const inputValidation = function (e) {
   e.preventDefault();
-  // if ((singUpInput = '')) {
-  //   console.log('sdaas');
-  //   return;
-  // }
+  if (
+    inputUser.value.length === 0 ||
+    inputEmail.value.length === 0 ||
+    inputPassword.value.length === 0
+  )
+    return;
   successMessage.classList.remove('hidden');
   setTimeout(() => {
     successMessage.classList.add('hidden');
@@ -49,20 +57,19 @@ document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !registration.classList.contains('hidden'))
     closeRegistrationForm();
 });
-createBtn.addEventListener(
-  'click',
-  inputValidation
-  // check if inputs are filled
-  // set timeout
-  // if yes clear inputs
-  // display success message
-  // close all and refresh browser
-  // If no, do not display message
-);
+createBtn.addEventListener('click', inputValidation);
+
+// check if inputs are filled
+// set timeout
+// if yes clear inputs
+// display success message
+// close all and refresh browser
+// If no, do not display message
 
 // 2- smooth scrolling
 // a- for nav
 navList.addEventListener('click', function (e) {
+  // Prevent form from submitting
   e.preventDefault();
 
   // Matching stratergy - making sure that the event only triggers when the e.target has the class 'nav__link'
@@ -74,6 +81,7 @@ navList.addEventListener('click', function (e) {
 
 // b- smooth scrolling for footer Pages
 footerPages.addEventListener('click', function (e) {
+  // Prevent form from submitting
   e.preventDefault();
 
   const id = e.target.getAttribute('href');
