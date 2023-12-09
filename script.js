@@ -9,7 +9,7 @@ const successMessage = document.querySelector('.success-message');
 
 // form input elements
 const createBtn = document.querySelector('.btn--form');
-let singUpInput = document.forms['registerForm']['fname'].value;
+const currentUserName = document.querySelector('.user-name');
 const inputUser = document.querySelector('.reg-input-user');
 const inputEmail = document.querySelector('.reg-input-email');
 const inputPassword = document.querySelector('.reg-input-password');
@@ -43,6 +43,7 @@ const inputValidation = function (e) {
     inputPassword.value.length === 0
   )
     return;
+  currentUserName.textContent = inputUser.value;
   successMessage.classList.remove('hidden');
   setTimeout(() => {
     successMessage.classList.add('hidden');
