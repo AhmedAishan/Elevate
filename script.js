@@ -6,6 +6,7 @@ const registration = document.querySelector('.registration');
 const closeSignUp = document.querySelector('.registration__btn');
 const overlay = document.querySelector('.overlay');
 const successMessage = document.querySelector('.success-message');
+const img = document.querySelector('img[data-src]');
 
 // form input elements
 const createBtn = document.querySelector('.btn--form');
@@ -18,6 +19,7 @@ const navList = document.querySelector('.nav__list');
 const footerPages = document.querySelector('.footer__pages');
 const allSections = document.querySelectorAll('.section');
 
+// hidden class
 const hidden = document.querySelector('.hidden');
 
 // 1- sign-up form
@@ -37,6 +39,7 @@ const closeRegistrationForm = function (e) {
 // account created message to the user
 const inputValidation = function (e) {
   e.preventDefault();
+  // check if inputs are filled
   if (
     inputUser.value.length === 0 ||
     inputEmail.value.length === 0 ||
@@ -59,13 +62,6 @@ document.addEventListener('keydown', function (e) {
     closeRegistrationForm();
 });
 createBtn.addEventListener('click', inputValidation);
-
-// check if inputs are filled
-// set timeout
-// if yes clear inputs
-// display success message
-// close all and refresh browser
-// If no, do not display message
 
 // 2- smooth scrolling
 // a- for nav
@@ -94,6 +90,7 @@ const revealSections = function (entries, observer) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) return;
+  //enrty.target = current element that is being intersected
   entry.target.classList.remove('section--hidden');
 
   observer.unobserve(entry.target);
@@ -110,4 +107,25 @@ allSections.forEach(function (section) {
 });
 
 // 5- lazy loading
+const lazyLoadImg = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+  entry.target.src = entry.target.dataset.src;
+
+  // This is to remove the blur effect on image only after the high res img is ready
+  entry.target.addEventListener('load', function () {
+    entry.target.classList.remove('blur-img');
+  });
+
+  observer.unobserve(entry.target);
+};
+
+const imgObserver = new IntersectionObserver(lazyLoadImg, {
+  root: null,
+  threshold: 0.1,
+});
+
+imgObserver.observe(img);
+
 // 7- skeleton
