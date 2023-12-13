@@ -128,5 +128,3 @@ const imgObserver = new IntersectionObserver(lazyLoadImg, {
 });
 
 imgObserver.observe(img);
-
-// 7- skeleton
