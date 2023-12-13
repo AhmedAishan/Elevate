@@ -124,6 +124,7 @@ const lazyLoadImg = function (entries, observer) {
 const imgObserver = new IntersectionObserver(lazyLoadImg, {
   root: null,
   threshold: 0.1,
+  rootMargin: '200px',
 });
 
 imgObserver.observe(img);
