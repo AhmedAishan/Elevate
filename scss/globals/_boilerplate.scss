@@ -1,3 +1,5 @@
+@use '../util' as u;
+
 *,
 *::before,
 *::after {
@@ -8,6 +10,10 @@
 
 html {
   font-size: 62.5%;
+
+  @include u.respond(tab-landscape) {
+    font-size: 50%;
+  }
 }
 
 body {
