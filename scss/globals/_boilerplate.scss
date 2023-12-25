@@ -12,7 +12,19 @@ html {
   font-size: 62.5%;
 
   @include u.respond(tab-landscape) {
+    font-size: 55%;
+  }
+
+  @include u.respond(tab-portrait) {
     font-size: 50%;
+  }
+
+  @include u.respond(phone) {
+    font-size: 35%;
+  }
+
+  @include u.respond(big-screen-2) {
+    font-size: 65%;
   }
 }
 

@@ -1,3 +1,5 @@
+@use '../util/' as u;
+
 a,
 a:active,
 a:visited {
@@ -12,6 +14,11 @@ body {
 h1 {
   font-size: 10rem;
   font-weight: 700;
+
+  @include u.respond(big-screen-1) {
+    font-size: 8rem;
+    font-weight: 600;
+  }
 }
 
 h2 {

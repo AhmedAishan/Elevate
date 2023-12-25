@@ -1,3 +1,5 @@
+@use '../util/' as u;
+
 .section {
   transition: transform 1s, opacity 1s;
 }
@@ -171,6 +173,12 @@
 
   &__contact-text {
     z-index: 1;
+
+    &--2 {
+      @include u.respond(big-screen-1) {
+        font-size: 3rem;
+      }
+    }
   }
 
   &__background {
@@ -179,6 +187,19 @@
     z-index: 0;
     pointer-events: none;
     user-select: none;
+
+    @include u.respond(big-screen-1) {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @include u.respond(big-screen-3) {
+      margin-top: -50rem;
+    }
+
+    @include u.respond(big-screen-4) {
+      margin-top: -53rem;
+    }
   }
 }
 
@@ -196,6 +217,17 @@
   align-content: center;
   justify-content: center;
   justify-items: center;
+
+  @include u.respond(big-screen-1) {
+    margin-top: 0;
+  }
+
+  @include u.respond(big-screen-3) {
+    margin-top: -20vh;
+  }
+  @include u.respond(big-screen-4) {
+    margin-top: -28vh;
+  }
 
   &__brand {
     justify-self: start;

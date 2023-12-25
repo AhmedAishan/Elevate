@@ -31,9 +31,25 @@
     }
   } //1200px
 
-  @if $breakpoint == big-screens {
+  @if $breakpoint == big-screen-1 {
+    @media only screen and (max-width: 98.125em) {
+      @content;
+    }
+  } //1570
+
+  @if $breakpoint == big-screen-2 {
     @media only screen and (min-width: 112.5em) {
       @content;
     }
   } //1800
+  @if $breakpoint == big-screen-3 {
+    @media only screen and (min-width: 133.8125em) {
+      @content;
+    }
+  } //2141
+  @if $breakpoint == big-screen-4 {
+    @media only screen and (min-width: 179.375em) {
+      @content;
+    }
+  } //2870
 }
