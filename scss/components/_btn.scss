@@ -1,3 +1,5 @@
+@use '../util' as u;
+
 .btn {
   cursor: pointer;
   border: none;
@@ -19,6 +21,12 @@
     align-self: flex-start;
     box-shadow: 0rem 0.4rem 9rem rgba(0, 0, 0, 0.199);
     padding: 1rem 1.5rem;
+
+    @include u.respond(tab-landscape) {
+      align-self: center;
+      margin: 2rem 0 2rem 0;
+      width: 100%;
+    }
   }
 
   &--form {

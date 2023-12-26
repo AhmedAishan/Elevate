@@ -171,12 +171,27 @@
   justify-content: space-evenly;
   margin-top: 2rem;
 
+  @include u.respond(tab-landscape) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__contact-text {
     z-index: 1;
+
+    h1 {
+      @include u.respond(tab-portrait) {
+        font-size: 6.7rem;
+      }
+    }
 
     &--2 {
       @include u.respond(big-screen-1) {
         font-size: 3rem;
+      }
+
+      @include u.respond(tab-portrait) {
+        font-size: 2.6rem;
       }
     }
   }
@@ -208,7 +223,7 @@
 
   background-color: var(--grey-2);
   height: 30rem;
-  margin-top: -15vh;
+  margin-top: -17vh;
   color: var(--white);
   font-size: 1.4rem;
 
@@ -232,9 +247,15 @@
     justify-content: space-between;
   }
 
-  @include u.respond(big-screen-3) {
+  @include u.respond(big-screen-2) {
     margin-top: -20vh;
   }
+
+  @include u.respond(big-screen-3) {
+    margin-top: -26vh;
+    height: 35rem;
+  }
+
   @include u.respond(big-screen-4) {
     margin-top: -28vh;
   }

@@ -1,3 +1,5 @@
+@use '../util/' as u;
+
 .form {
   display: flex;
   flex-direction: column;
@@ -5,6 +7,10 @@
   font-size: 2rem;
   z-index: 1;
   position: relative;
+
+  @include u.respond(tab-landscape) {
+    margin: 4.3rem 0 2rem 0;
+  }
 
   &__label {
     display: block;
@@ -24,11 +30,19 @@
     font-family: inherit;
     width: 25vw;
     outline: none;
+
+    @include u.respond(tab-landscape) {
+      width: 50vw;
+    }
   }
 
   &__message {
     width: 25vw !important;
     height: 100%;
     resize: none;
+
+    @include u.respond(tab-landscape) {
+      width: 50vw !important;
+    }
   }
 }
