@@ -222,6 +222,16 @@
     margin-top: 0;
   }
 
+  @include u.respond(tab-portrait) {
+    grid-template-columns: 20vw 7vw repeat(2, 20vw);
+    justify-content: space-evenly;
+  }
+
+  @include u.respond(phone) {
+    grid-template-columns: 20vw 0 25vw max-content;
+    justify-content: space-between;
+  }
+
   @include u.respond(big-screen-3) {
     margin-top: -20vh;
   }
