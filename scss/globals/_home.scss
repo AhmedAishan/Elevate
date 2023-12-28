@@ -178,10 +178,15 @@
 
   &__contact-text {
     z-index: 1;
+    text-align: center;
 
     h1 {
       @include u.respond(tab-portrait) {
         font-size: 6.7rem;
+      }
+
+      @include u.respond(phone) {
+        font-size: 6rem;
       }
     }
 
@@ -192,6 +197,10 @@
 
       @include u.respond(tab-portrait) {
         font-size: 2.6rem;
+      }
+
+      @include u.respond(phone) {
+        font-size: 2.2rem;
       }
     }
   }
@@ -243,9 +252,12 @@
   }
 
   @include u.respond(phone) {
-    grid-template-columns: 20vw 0 25vw max-content;
-    justify-content: space-between;
-    padding: 0 0.2rem 0 0.2rem;
+    grid-template-rows: 8vh 12vh 5vh 4vh;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    padding-left: 2rem;
+    height: 70rem;
+    gap: 1rem;
   }
 
   @include u.respond(big-screen-2) {
@@ -263,10 +275,18 @@
 
   &__brand {
     justify-self: start;
+
+    @include u.respond(phone) {
+      grid-area: 4/1/-1/2;
+    }
   }
   &__connect {
     grid-area: 2/1/3/2;
     justify-self: start;
+
+    @include u.respond(phone) {
+      grid-area: 3/1/4/2;
+    }
   }
   &__icons {
     cursor: pointer;
@@ -282,6 +302,10 @@
   &__company {
     grid-column: 3/4;
 
+    @include u.respond(phone) {
+      grid-area: 1/1/2/2;
+    }
+
     &__icon-box {
       display: grid;
       grid-template-rows: repeat(2, 1fr);
@@ -295,8 +319,8 @@
     }
 
     &__icons {
-      width: 3.8rem;
-      height: 3.8rem;
+      width: 3rem;
+      height: 3rem;
       margin-right: 1rem;
     }
   }
@@ -304,6 +328,11 @@
     grid-column: 4/-1;
     display: grid;
     gap: 0.5rem;
+
+    @include u.respond(phone) {
+      grid-area: 2/1/3/2;
+      gap: 0;
+    }
 
     a,
     a:visited {

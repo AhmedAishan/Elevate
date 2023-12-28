@@ -1,3 +1,5 @@
+@use '../util/' as u;
+
 .nav {
   padding: 0 3rem 0 3rem;
   background-color: var(--white);
@@ -9,8 +11,11 @@
   &__list {
     display: flex;
     align-items: center;
-
     list-style: none;
+
+    @include u.respond(tab-portrait) {
+      flex-direction: column;
+    }
   }
 
   &__item {

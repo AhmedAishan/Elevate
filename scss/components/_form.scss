@@ -34,6 +34,11 @@
     @include u.respond(tab-landscape) {
       width: 50vw;
     }
+
+    @include u.respond(phone) {
+      width: 50vw;
+      min-width: 40rem;
+    }
   }
 
   &__message {
@@ -43,6 +48,11 @@
 
     @include u.respond(tab-landscape) {
       width: 50vw !important;
+    }
+
+    @include u.respond(phone) {
+      width: 50vw;
+      min-width: 40rem;
     }
   }
 }
