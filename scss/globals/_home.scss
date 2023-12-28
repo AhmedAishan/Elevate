@@ -245,6 +245,7 @@
   @include u.respond(phone) {
     grid-template-columns: 20vw 0 25vw max-content;
     justify-content: space-between;
+    padding: 0 0.2rem 0 0.2rem;
   }
 
   @include u.respond(big-screen-2) {
