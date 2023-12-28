@@ -15,12 +15,17 @@
 
     @include u.respond(tab-portrait) {
       flex-direction: column;
+      align-items: flex-end;
     }
   }
 
   &__item {
     &:not(:last-child) {
       padding-right: 4rem;
+
+      @include u.respond(tab-portrait) {
+        padding-right: 0;
+      }
     }
   }
 
@@ -32,6 +37,10 @@
     font-size: 2.2rem;
     transition: all 0.2s;
     border-right: 5px solid transparent;
+
+    @include u.respond(tab-portrait) {
+      border-bottom: 1px solid var(--grey);
+    }
 
     &:hover {
       color: var(--text-format);
