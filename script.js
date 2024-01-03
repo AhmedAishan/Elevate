@@ -1,7 +1,7 @@
 'use strict';
 
 // 0- DATA
-const openSignUp = document.querySelector('.btn-signup');
+const openSignUp = document.querySelector('.btn--signup');
 const registration = document.querySelector('.registration');
 const closeSignUp = document.querySelector('.registration__btn');
 const overlay = document.querySelector('.overlay');

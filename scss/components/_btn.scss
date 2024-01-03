@@ -17,6 +17,13 @@
     background-color: var(--primary-color);
   }
 
+  &--signup {
+    @include u.respond(tab-portrait) {
+      font-size: 3rem;
+      padding: 1.3rem;
+    }
+  }
+
   &--contact {
     align-self: flex-start;
     box-shadow: 0rem 0.4rem 9rem rgba(0, 0, 0, 0.199);

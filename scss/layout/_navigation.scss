@@ -13,9 +13,17 @@
     align-items: center;
     list-style: none;
 
+    //animation for mobile width navigation
+    transition: right 0.6s ease-out;
+
     @include u.respond(tab-portrait) {
       flex-direction: column;
       align-items: flex-end;
+
+      position: fixed;
+      right: -30rem;
+      top: 14rem;
+      z-index: 1000;
     }
   }
 
@@ -25,6 +33,7 @@
 
       @include u.respond(tab-portrait) {
         padding-right: 0;
+        margin-bottom: 5rem;
       }
     }
   }
@@ -39,7 +48,8 @@
     border-right: 5px solid transparent;
 
     @include u.respond(tab-portrait) {
-      border-bottom: 1px solid var(--grey);
+      color: var(--white);
+      font-size: 3.2rem;
     }
 
     &:hover {
@@ -54,4 +64,103 @@
 
 img {
   width: 15rem;
+}
+
+// for mobile
+
+.navigation-checkbox {
+  display: none;
+}
+
+.navigation-button {
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  top: 4rem;
+  right: 4rem;
+  z-index: 1000;
+  text-align: center;
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+
+  @include u.respond(tab-portrait) {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.navigation-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.253);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  transition: all 0.5s;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+// navigation hamburger button
+.navigation-icon {
+  position: relative;
+  margin-top: 2.3rem;
+
+  &,
+  &::before,
+  &::after {
+    width: 3rem;
+    height: 2px;
+    background-color: var(--text-format);
+    display: inline-block;
+    transition: all 0.2s;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    background-color: var(--black);
+  }
+
+  &::before {
+    top: -1rem;
+  }
+  &::after {
+    top: 1rem;
+  }
+}
+
+// navigation button Function
+.navigation-checkbox:checked ~ .nav > .nav__list {
+  //nav__list is a child of .nav and also .nav is a general sibling of .navigation-checkbox
+  @include u.respond(tab-portrait) {
+    right: 3rem;
+  }
+}
+
+.navigation-checkbox:checked ~ .navigation-background {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navigation-checkbox:checked + .navigation-button .navigation-icon {
+  background-color: transparent;
+}
+.navigation-checkbox:checked + .navigation-button .navigation-icon::after {
+  transform: rotate(45deg);
+}
+.navigation-checkbox:checked + .navigation-button .navigation-icon::before {
+  top: 1rem;
+  transform: rotate(-45deg);
+}
+
+.nav__link:visited + .navigation-background {
+  opacity: 0;
+  visibility: hidden;
 }
