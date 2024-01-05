@@ -160,7 +160,8 @@ img {
   transform: rotate(-45deg);
 }
 
-.nav__link:visited + .navigation-background {
-  opacity: 0;
-  visibility: hidden;
-}
+//WIP FUNCTION...
+// .nav > .nav__list > .nav__item > .nav__link ~ .navigation-background {
+//   opacity: 0;
+//   visibility: hidden;
+// }

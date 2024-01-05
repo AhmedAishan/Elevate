@@ -15,6 +15,8 @@ const inputUser = document.querySelector('.reg-input-user');
 const inputEmail = document.querySelector('.reg-input-email');
 const inputPassword = document.querySelector('.reg-input-password');
 
+const navCheckbox = document.querySelector('.navigation-checkbox');
+
 const navList = document.querySelector('.nav__list');
 const footerPages = document.querySelector('.footer__pages');
 const allSections = document.querySelectorAll('.section');
@@ -73,6 +75,8 @@ navList.addEventListener('click', function (e) {
   if (e.target.classList.contains('nav__link')) {
     const id = e.target.getAttribute('href'); // Selecting only the part where we actually mention where to scroll ex: #home
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' }); //Now we are passing the above value into this (passing the value of where to scroll)
+    // Uncheck the checkbox when any navlist is clicked, so that the background and the navlist will be hidden acc to css code
+    navCheckbox.checked = false;
   }
 });
 
