@@ -1,5 +1,11 @@
+@use '../util/' as u;
+
 .u-padding-left {
   padding-left: 3rem !important;
+
+  @include u.respond(tab-portrait) {
+    padding-left: 0 !important;
+  }
 }
 
 .u-margin-bottom {
