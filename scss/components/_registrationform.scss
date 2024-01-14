@@ -1,3 +1,5 @@
+@use '../util/' as u;
+
 .registration {
   background-color: var(--background);
   min-width: 30%;
@@ -12,6 +14,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.5s;
+
+  @include u.respond(big-screen-1) {
+    height: 50rem;
+  }
 
   &__btn {
     cursor: pointer;
@@ -31,12 +37,15 @@
 
   &__form {
     display: grid;
-    grid-template-columns: 20rem 1fr;
+    grid-template-columns: 15rem 1fr;
     row-gap: 3rem;
     align-content: center;
     margin: 0 3.5rem;
-
     font-size: 2.2rem;
+
+    @include u.respond(phone) {
+      margin: 0 2.5rem;
+    }
 
     input {
       outline: none;
@@ -44,6 +53,10 @@
       background-color: var(--white);
       font-size: 2.2rem;
       padding: 0.6rem;
+
+      @include u.respond(phone) {
+        width: 35vw;
+      }
     }
   }
 }

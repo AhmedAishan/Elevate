@@ -81,6 +81,12 @@
 
   &__icons {
     height: 12rem;
+
+    &--format {
+      @include u.respond(phone) {
+        fill: var(--text-format);
+      }
+    }
   }
 
   &__text {
@@ -144,6 +150,7 @@
     height: 1.8rem;
     width: 2rem;
     margin-right: 0.5rem;
+    transition: fill 0.3s;
   }
 
   &__learn-more {
@@ -154,7 +161,11 @@
     padding: 3px;
 
     &:hover {
-      border-bottom: 2.8px solid var(--text-format);
+      border-bottom: 2.9px solid var(--text-format);
+    }
+
+    &:hover .services-content__icons {
+      fill: var(--text-format);
     }
   }
 }
@@ -274,8 +285,11 @@
   width: 70%;
   height: 18rem;
   margin: 8rem auto 0;
-  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.25);
   color: var(--white);
+  transition: box-shadow 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 
   @include u.respond(tab-portrait) {
     width: 80%;
