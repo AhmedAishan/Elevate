@@ -19,6 +19,10 @@
     height: 50rem;
   }
 
+  @include u.respond(phone) {
+    height: auto;
+  }
+
   &__btn {
     cursor: pointer;
     border: none;
@@ -63,7 +67,7 @@
 
 .success-message {
   position: fixed;
-  top: 18%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -82%);
   z-index: 3000;
@@ -72,7 +76,29 @@
   padding: 1rem;
   font-size: 1.8rem;
   text-align: center;
-  min-width: 33%;
-
+  width: 40%;
+  height: auto;
   transition: all 0.5s;
+
+  @include u.respond(big-screen-1) {
+    width: 43%;
+  }
+
+  @include u.respond(tab-landscape) {
+    top: 22%;
+  }
+
+  @include u.respond(tab-portrait) {
+    width: 50%;
+    top: 25%;
+  }
+
+  @include u.respond(phone) {
+    width: 55%;
+    top: 20%;
+  }
+
+  @include u.respond(big-screen-3) {
+    width: 28%;
+  }
 }
