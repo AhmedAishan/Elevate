@@ -1,7 +1,7 @@
 @use '../util/' as u;
 
 .u-padding-left {
-  padding-left: 3rem !important;
+  padding-left: 12rem !important;
 
   @include u.respond(tab-portrait) {
     padding-left: 0 !important;
@@ -9,5 +9,5 @@
 }
 
 .u-margin-bottom {
-  margin-bottom: 15rem;
+  margin-bottom: 20rem;
 }
