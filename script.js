@@ -24,9 +24,6 @@ const allSections = document.querySelectorAll('.section');
 // hidden class
 const hidden = document.querySelector('.hidden');
 
-// smooth scrolling data
-const sectionsToBeRevealed = document.querySelectorAll('.revealEl');
-
 // 1- sign-up form
 
 const openRegistrationForm = function (e) {
@@ -98,19 +95,19 @@ const revealSections = function (entries, observer) {
 
   if (!entry.isIntersecting) return;
   //enrty.target = current element that is being intersected
-  entry.target.classList.remove('revealEl--hidden');
+  entry.target.classList.remove('section--hidden');
 
   observer.unobserve(entry.target);
 };
 
 const sectionObserver = new IntersectionObserver(revealSections, {
   root: null,
-  threshold: 0.3,
+  threshold: 0.1,
 });
 
-sectionsToBeRevealed.forEach(function (section) {
+allSections.forEach(function (section) {
   sectionObserver.observe(section);
-  section.classList.add('revealEl--hidden');
+  section.classList.add('section--hidden');
 });
 
 // 5- lazy loading
